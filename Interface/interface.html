@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- TITULO DO SITE -->
+	<title>Projeto Interface/Gráfio</title>
+	<!-- INTERPRETADOR ORTOGRÁFICO -->
+	<meta charset="utf-8">
+	<!-- FAVICON -->
+	<link rel="shortcut icon" href="sine.png" />
+	<!-- BOOTSTRAP CSSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- BOOTSTRAP JAVASCRIPT -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- Image and text -->
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <img src="ano.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      Calculadora Gráfica
+    </a>
+  </nav>
+</head>
+<body>
+    
+<!-- Calculadora HTML -->
+    <form>
+    <table bgcolor="#F5FFFA" cellspacing=2 cellpadding=2 border=3>
+    <tr>
+    <td>
+    <b>
+    <input name="a" size="3">X<sup>2</sup>+
+    <input name="b" size="3">X +
+    <input name="c" size="3">
+    <br>
+    <input type="button" value="x-top" name="x-top" onclick="xtop(this.form)">
+    <input type="button" value="y-top" name="y-top" onclick="ytop(this.form)">
+    <input type="button" value="crd" name="crd" onclick="doCoord(this.form)">
+    <input type="button" value="disc." name="D" onclick="disc(this.form)">
+    <br>
+    <input type="button" value="0-points" name="zeroes" onclick="zeroes1(this.form);zeroes2(this.form)">
+    <input type="button" onclick="xtop(this.form);ytop(this.form);doCoord(this.form);disc(this.form);zeroes1(this.form);zeroes2(this.form)" value="do all">
+    <input type="button" name="pics" value="show e.g." onClick="if(form.a.value>0 && form.o.value>0)move_in('p','p2.gif');if (form.a.value<0 && form.o.value>0)move_in('p','p3.gif'); if(form.a.value>0 && form.o.value==0) move_in('p','p4.gif'); if(form.a.value<0 && form.o.value==0) move_in('p','p5.gif'); if(form.a.value>0 && form.o.value<0) move_in('p','p6.gif'); if(form.a.value<0 && form.o.value<0) move_in('p','p7.gif')" value="show e.g.">
+    <br>
+    <input type="text" name="u" size="100"> x-top<br>
+    <input type="text" name="u2" size="100"> y-top<br>
+    <input type="text" size="100" name="co" onmouseover="form.rem.value=form.co.value"> Coord.<br>
+    <input type="text" size="100" name="o"> Discriminant<br>
+    <input type="text" size="100" name="n"> neg zero pt.<br>
+    <input type="text" size="100" name="n2"> pos zero pt.
+    <input type="hidden" value="" name="rem"><br>
+    <input type="reset" value="reset"><br>
+    </b>
+    </td>
+    <td><img src="p1.gif" width=200 name="p" height=200 border=0 alt=""></td>
+    </tr>
+    </table>
+    </form>
+    
+</body>
+</html>
