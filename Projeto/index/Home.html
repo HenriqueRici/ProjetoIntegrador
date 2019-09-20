@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../style/style.css">
+    <link rel="stylesheet" type="text/css" href="../style/column.css">
+    <link rel="stylesheet" type="text/css" href="../style/navbar.css">
+    <link rel="stylesheet" type="text/css" href="../style/input.css">
+    <link rel="stylesheet" type="text/css" href="../style/function-plot.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script type="text/javascript" src="../script/script.js"></script>
+    <script type="text/javascript" src="../script/function-plot.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://mauriciopoppe.github.io/function-plot/js/function-plot.js"></script>
+    <title>Representação de funções</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Representação de funções em forma gráfica</h1>
+        <div class="topnav" id="myTopnav">
+            <a href="Home.html">Home</a>
+            <snap class="dropdown active">
+                <snap class="dropdown-content">
+                    <a href="Home.html">Método da Bissecção</a>
+                </snap>
+            </snap>
+        </div>
+    </div>
+    <div id="container">
+        <div id="left">
+            <h2>Entrada:</h2>
+            <label for="function">Função</label>
+            <input type="text" id="function" name="functionName" placeholder="x^2 + 5x - 1" required onchange="plot()">
+
+            <label for="lower">Entrada de Dados:</label>
+            <input class="btn btn-primary" type="submit" value="Arquivo">
+
+            <!--<input type="text" id="lower" name="lowerName" placeholder="0" required onchange="plot()">
+            <label for="higher">Valor maior</label>
+            <input type="text" id="higher" name="higherName" placeholder="10" required onchange="plot()">
+            <label for="precision">Precisão</label>
+            <input type="text" id="precision" name="precisionName" placeholder="0.0001" required onchange="plot()">-->
+            <button type="submit" onclick="functionRoot(bissection)">Gerar Gráfico</button>
+        </div>
+        <div id="right">
+            <div id="myFunction"></div>
+        </div>
+    </div>
+</body>
+</html>
