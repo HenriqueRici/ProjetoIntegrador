@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+
+	<!--Referencias aos styles CSS-->
+	<link rel="stylesheet" type="text/css" href="../style/cabecalho-pagina.css">
+	<link rel="stylesheet" type="text/css" href="../style/entrada-saida.css">
+	<link rel="stylesheet" type="text/css" href="../style/sub-cabecalho.css">
+	<link rel="shortcut icon" href="../img/sine.png" />
+	<!--FONTE-->
+	<link rel="stylesheet" type="text/css" href="../style/fonte.css">
+
+	<!--Referencias aos códigos JavaScript-->
+	<script type="text/javascript" src="../script/csv.js"></script>
+	<script type="text/javascript" src="../script/d3.min.js"></script>
+	<script type="text/javascript" src="../script/d3.plot.js"></script>
+	<script type="text/javascript" src="../script/plot-method.js"></script>
+	<script type="text/javascript" src="../script/math.js"></script>
+
+	<!--Titulo da pagina-->
+	<title>GetAnalysis</title>
+</head>
+
+<body>
+
+	<!--Cabeçalho -->
+	<div class="header">
+		<h1>GetAnalysis</h1>
+		<div class="topnav" id="myTopnav">
+			<a href="EntradaComFunção.html" class="active">Entrada com Função</a>
+			<snap class="dropdown">
+				<snap class="dropdown-content">
+					<a href="EntradaDeDados.html">Entrada de Dados</a>
+				</snap>
+			</snap>
+		</div>
+	</div>
+
+	<!--Recipientes-->
+	<div id="container">
+
+		<!--Recipiente de entrada-->
+		<div id="left">
+			<h2>
+				<center>Entrada</center>
+			</h2>
+			<label for="function">Entre com um arquivo do tipo CSV:</label>
+			<br><br>
+			<input type="file" id="function" onChange="pegaCSV(this)">
+			<br><br>
+			<button type="submit" onclick="method()">Gerar Gráfico</button>
+		</div>
+
+		<!-- Recipiente do gráfico-->
+		<div id="right">
+			<h2>Gráfico da Interpolação dos Dados</h2>
+			<div id="myFunction"></div>
+			<div id="myFunction1"></div>
+		</div>
+	</div>
+</body>
+
+</html>
